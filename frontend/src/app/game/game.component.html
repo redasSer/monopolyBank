@@ -1,0 +1,32 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<div class="container px-4">
+  <div class="d-flex justify-content-center form_container">
+    <div class="col">
+      <div class="p-3 border bg-light">
+          <h1 class="row justify-content-center space">{{currentPlayer?.username}}</h1>
+          <div class="col-md-3">
+            <div class="card-counter success">
+              <i class="fa fa-money"></i>
+              <span class="count-numbers">{{currentPlayer.balance | number: '2.' }}</span>
+              <span class="count-name">Balance</span>
+            </div>
+          </div>
+          <div class="row justify-content-center space">
+            <div class="btn-group ">
+                <button class="btn btn-warning" routerLink="/transfer" >Transfer money</button>
+                <button class="btn btn-success" routerLink="/bank">Bank</button>
+            </div>
+          </div>
+          <div class="row justify-content-center back">
+            <button class="btn btn-danger" (click)="logout()">Logout</button>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+</div>
